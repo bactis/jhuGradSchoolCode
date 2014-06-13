@@ -41,6 +41,10 @@ def main():
             # if user wants to calculate light urban loss
             elif selection == "2":
                 rss = calcReceivedSignalStrength(lightUrbanLoss)
+                
+            # to find HBS
+            elif selection == "3":
+                findTheHBS()
 
             #if user wants to quit
             elif selection == "q":
@@ -138,7 +142,13 @@ def calcReceivedSignalStrength(pathLoss):
     return eirp - pathLoss
 
 
-
+#----------------------------------------------------------------------------------
+#Name:          findTheHBS
+#Param:         n/a
+#Returns:       the value of HBS
+#Notes:         -prompts user for the value EIRP
+#               -determines what the path loss is
+#               -performs ALEGEBRA to get the value of HBS
 def findTheHBS():
     
     print ""
@@ -189,10 +199,11 @@ def findTheHBS():
     print str(pathloss) + " -46.3 - 33.9log(f) = ..."
     print str(pathloss) + "-46.3 -33.9log(f) + (1.1log(f) - 0.7)hmobile = -13.82(hbs) + ..."
     print str(pathloss) + "-46.3 -33.9log(f) + (1.1.log(f) -0.7)hmobile -1.56log(f) = 13.82(hbs) - ..."
-     print str(pathloss) + "-46.3 -33.9log(f) + (1.1.log(f) -0.7)hmobile -1.56log(f) = 13.82(hbs) + 0.8 = -13.82log(hbs) + (44.9 -6.55log(hbs)) log(d)
+    print str(pathloss) + "-46.3 -33.9log(f) + (1.1.log(f) -0.7)hmobile -1.56log(f) = 13.82(hbs) + 0.8  = " \
+    +  "-13.82log(hbs) + (44.9 -6.55log(hbs)) log(d)"
 
 
-
+    
 
 
     #print "-84 = 60 - PATHLOSS"
