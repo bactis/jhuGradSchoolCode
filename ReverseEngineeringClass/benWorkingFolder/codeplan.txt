@@ -1,0 +1,39 @@
+
+1: write arg parser for it via python module
+    a: help DONE
+    b: input expected   DONE
+    c: optional arguments? starting offset, default 0       DONE
+    
+
+2: read in 2 bytes at a time
+    a: how to do this in python…. DONE
+    b: how to skip bytes
+    
+3: check if valid/known/supported instruction
+    a: have a datastructor of valid ones
+    b: fields: name and value
+    c: have a function to handle invalid (ask how many bytes to skip?)
+        I: non supported instruction detected, try skiping two bytes?
+
+
+4: instruction length handling
+    a: have a datastructor containing the length of it
+    b: identify different parts
+
+
+                -is it known instruction
+                    
+                -if unknown tell user, ask how to procede
+
+            B: determine length
+            ???
+        II: if invalid skip 2 bytes
+
+
+
+- misc things to keep in mind
+
+-a pointer for current instruction
+-a pointer for next instruction
+
+? : some method to display things in a pretty manner
